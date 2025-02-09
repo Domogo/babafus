@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bt20hvua8qvun"]
+[gd_scene load_steps=3 format=3 uid="uid://bt20hvua8qvun"]
 
 [ext_resource type="PackedScene" uid="uid://b2h0jm5qwsxo7" path="res://scenes/tileset_manager.tscn" id="1_5mc6k"]
+[ext_resource type="PackedScene" uid="uid://dsgd1vtn8va1q" path="res://scenes/components/character/character.tscn" id="2_cbf6s"]
 
 [node name="Game" type="Node2D"]
 
@@ -9,3 +10,6 @@
 [node name="Camera2D" type="Camera2D" parent="TilesetManager"]
 position = Vector2(40, 41)
 zoom = Vector2(5, 5)
+
+[node name="Character" parent="TilesetManager" instance=ExtResource("2_cbf6s")]
+position = Vector2(8, 8)

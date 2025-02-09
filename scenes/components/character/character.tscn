@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://dsgd1vtn8va1q"]
+
+[ext_resource type="PackedScene" uid="uid://bkmyu2jih6ghv" path="res://scenes/components/movement/movement_component.tscn" id="1_0m7lg"]
+[ext_resource type="Texture2D" uid="uid://dysl1fff2w3u8" path="res://icon.svg" id="1_b7kgv"]
+[ext_resource type="Script" path="res://scenes/components/character/character.gd" id="1_x7fi6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p7yp3"]
+size = Vector2(128, 128)
+
+[node name="Character" type="CharacterBody2D"]
+scale = Vector2(0.1, 0.1)
+script = ExtResource("1_x7fi6")
+
+[node name="MovementComponent" parent="." node_paths=PackedStringArray("character") instance=ExtResource("1_0m7lg")]
+unique_name_in_owner = true
+character = NodePath("..")
+
+[node name="Icon" type="Sprite2D" parent="."]
+texture = ExtResource("1_b7kgv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_p7yp3")
