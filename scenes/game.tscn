@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bt20hvua8qvun"]
+
+[ext_resource type="PackedScene" uid="uid://b2h0jm5qwsxo7" path="res://scenes/tileset_manager.tscn" id="1_5mc6k"]
+
+[node name="Game" type="Node2D"]
+
+[node name="TilesetManager" parent="." instance=ExtResource("1_5mc6k")]
+
+[node name="Camera2D" type="Camera2D" parent="TilesetManager"]
+position = Vector2(40, 41)
+zoom = Vector2(5, 5)
